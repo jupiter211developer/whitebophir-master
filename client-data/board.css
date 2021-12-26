@@ -1,0 +1,146 @@
+html, body, svg {
+	padding:0;
+	margin:0;
+	font-family: Liberation sans, sans-serif;
+}
+
+* {
+	touch-action: pan-x pan-y;
+}
+
+body {
+	background-color: #f2f2f2;
+}
+
+#canvas {
+	transform-origin: 0 0;
+	background-color: #fff;
+	min-width: 100%;
+}
+
+.forErasing {
+	outline: 2px solid red;
+}
+
+.selectedEl, .localSelectedEl {
+	outline: 2px solid blue;
+}
+
+#board {
+	position: relative;
+	overflow: hidden;
+}
+
+#canvas line {
+	fill: none;
+	stroke-linecap: round;
+	stroke-linejoin: round;
+}
+
+#canvas path:not(.pretty-cursor) {
+	fill: none;
+	stroke-linecap: round;
+	stroke-linejoin: round;
+}
+
+#canvas text {
+	font-family:"Arial", "Helvetica", sans-serif;
+	user-select:none;
+	-moz-user-select:none;
+}
+
+#canvas .opcursor {
+	pointer-events: none;
+	transition: .1s;
+}
+
+#canvas text.pretty-name {
+	font-size: 12px;
+}
+
+#canvas .triangle {
+	fill: none;
+}
+#cursor-me {
+	transition: 0s;
+}
+
+#formulaToolInput, #textToolInput {
+	min-width: 300px;
+	max-width: min(90vw, 400px);
+	padding: 20px;
+	border: 2px solid black;
+	position: absolute;
+}
+
+#textToolInput {
+	padding: 5px;
+	user-select: all;
+}
+
+#mobileWindowRect {
+	outline: 3px solid dodgerblue;
+	fill: none;
+	transition: .2s;
+}
+
+.border-for-white{
+	border: 1px solid black;
+}
+
+foreignObject {
+	overflow: visible;
+}
+
+.forErasing pre {
+	outline: 2px solid red;
+}
+
+.moveable-dashed {
+	display: none;
+}
+
+pre {
+	width: fit-content;
+	width: -moz-fit-content;
+	margin: 0;
+	user-select: none;
+}
+
+.d-none {
+	display: none;
+}
+
+.moveable-control-box {
+	z-index: 0 !important;
+}
+
+.main-tool-color{
+	position: absolute;
+	width: 10px;
+	height: 10px;
+	border: 1px solid #828282;
+	border-radius: 50%;
+	margin-bottom: 5px;
+	margin-right: 4px;
+	margin-top: 25px;
+	box-sizing: border-box;
+}
+
+.main-tool{
+	flex-direction: column;
+	align-items: flex-end;
+}
+
+.main-tool-width{
+	position: absolute;
+	width: 10px;
+	height: 10px;
+	font-family: Montserrat;
+	font-style: normal;
+	font-size: 9px;
+	line-height: 11px;
+	margin-right: 1px;
+	margin-bottom: 10px;
+    margin-top: 29px
+}
